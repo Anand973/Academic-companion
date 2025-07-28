@@ -20,8 +20,13 @@ const UserSchema=mongoose.Schema({
     role:{
         type:String,
         required:true,
+        enum:['ADMIN','MODERATOR','NORMAL'],
         default: "NORMAL"
 
+    },
+    isActive:{
+        type:Boolean,
+        default:true
     }
 },{timestamps:true})
 

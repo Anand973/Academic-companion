@@ -6,7 +6,9 @@ function setToken(user){
         _id:user._id,
         email:user.email,
         role:user.role,
-    },secret)
+    },secret,{
+        expiresIn:'24h'
+    })
 }
 
 function getToken(token){
